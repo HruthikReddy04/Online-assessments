@@ -186,4 +186,6 @@ aa
 
 ---
 
-T
+https://claude.ai/share/9d2132b4-c666-4429-bed5-db9051195739
+https://chatgpt.com/share/6a662450-60fc-83ee-851d-5e2cef019df8
+
