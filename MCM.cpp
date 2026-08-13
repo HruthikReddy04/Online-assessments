@@ -77,16 +77,21 @@ int solve(vector<vector<int>> &dp, int l ,int r)
     
 }
 
+
+//confusion about size of 2d dp
+//we want end result from 1 to n
 //tabulation
 int mcm_tabulation()
 {
-    vector<vector<int>> dp(nums.size(), vector<int> (nums.size(),0));
+    int n = nums.size()-1;
+    vector<vector<int>> dp(n+1 ,vector<int> (n+1,0));
+    
     
     
     //here dp represents cost of matrix multiplication
-    for(int len = 2; len<=nums.size()-1; len++)
+    for(int len = 2; len<=n; len++)
     {
-        for(int i = 1 ; i<=nums.size()-len; i++)
+        for(int i = 1 ; i<=n-len+1; i++)
         {
             int j = i+len-1;
             int ans = 1e5;
@@ -99,8 +104,11 @@ int mcm_tabulation()
         }
     }
     
-    return dp[1][nums.size()-1];
+    return dp[1][n];
 }
+
+//learning 
+
 
 int main()
 {
